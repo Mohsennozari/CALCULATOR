@@ -11,12 +11,12 @@
     <div class="container">
         <div class="calculator">
             <form action="">
-                <input type="text" name="display" id="display" readonly>
+                <input type="text" id="display" readonly>
             </form>
             <div class="buttons">
                 <input type="button" value="AC" onclick="clearDisplay()">
                 <input type="button" value="DE" onclick="deleteLast()">
-                <input type="button" value=".">
+                <input type="button" value="." onclick="appendToDisplay('.')">
                 <input type="button" value="/" onclick="appendToDisplay('/')">
                 <input type="button" value="7" onclick="appendToDisplay('7')">
                 <input type="button" value="8" onclick="appendToDisplay('8')">
@@ -31,7 +31,10 @@
                 <input type="button" value="3" onclick="appendToDisplay('3')">
                 <input type="button" value="+" onclick="appendToDisplay('+')">
                 <input type="button" value="0" onclick="appendToDisplay('0')">
-                <input type="button" value="=" onclick="calculateResult()">
+                <input type="button" value="00" onclick="appendToDisplay('00')">
+                <div class="operation">
+                    <input class="equal" type="button" value="=" onclick="calculateResult()" style="width: 95px;">
+                </div>
             </div>
         </div>
     </div>
