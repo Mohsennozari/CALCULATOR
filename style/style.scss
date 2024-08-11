@@ -1,0 +1,75 @@
+/* General body styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Modern font style */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    background-color: #f0f4f8; /* Soft light blue-gray background */
+    margin: 0; /* Remove default margin */
+}
+
+/* Container styles */
+.container {
+    background-color: #ffffff; /* White background for the calculator */
+    padding: 20px; /* Padding around the content */
+    border-radius: 15px; /* More rounded corners for a modern look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 320px; /* Fixed width */
+}
+
+/* Display input styles */
+#display {
+    width: 100%; /* Full width */
+    height: 50px; /* Height of the display */
+    font-size: 28px; /* Larger font size for better readability */
+    text-align: right; /* Right-align text */
+    margin-bottom: 15px; /* Space below the display */
+    padding: 10px; /* Padding inside the display */
+    border: 1px solid #ced4da; /* Light gray border */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #f8f9fa; /* Light background for the display */
+}
+
+/* Button grid styles */
+.buttons {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+    gap: 10px; /* Space between buttons */
+}
+
+/* Button styles */
+input[type="button"] {
+    padding: 20px; /* Padding inside buttons */
+    font-size: 20px; /* Font size */
+    border: none; /* No border */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #007bff; /* Bright blue background */
+    color: white; /* White text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.1s; /* Smooth transition for hover effect */
+}
+
+/* Button hover effect */
+input[type="button"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Button active effect */
+input[type="button"]:active {
+    background-color: #004494; /* Even darker blue when active */
+    transform: scale(0.95); /* Slightly shrink button on press */
+}
+
+/* Special button styles for operations */
+input[type="button"]:nth-child(4n) {
+    background-color: #28a745; /* Green for operators */
+}
+
+input[type="button"]:nth-child(4n):hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+input[type="button"]:nth-child(4n):active {
+    background-color: #1e7e34; /* Even darker green when active */
+}
