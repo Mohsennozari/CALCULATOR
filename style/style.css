@@ -1,140 +1,54 @@
 /* ========== General Body Styles ========== */
-/* Centralize content both vertically and horizontally within the viewport */
 body {
   font-family: "Poppins", sans-serif; /* Modern, clean font for better readability */
   display: flex; /* Flexbox layout for easy centering */
   justify-content: center; /* Horizontal centering */
   align-items: center; /* Vertical centering */
   height: 100vh; /* Full viewport height for perfect centering */
-  background-color: #e9ecef; /* Light gray background for a clean, subtle look */
   margin: 0; /* Remove default body margin */
+  background-image: url(/assets/9936923.jpg); /* Background image for a unique look */
+  background-size: cover; /* Cover the entire viewport with the background image */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent background image repetition */
+  background-attachment: fixed; /* Fixed background image for a consistent look */
 }
 
 /* ========== Container Styles ========== */
-/* Main container for content with rounded corners and a subtle shadow for depth */
 .container {
-  background-color: #ffffff; /* White background to create contrast against the body */
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
   padding: 25px; /* Generous padding for better visual comfort */
   border-radius: 20px; /* Rounded corners for a friendlier appearance */
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Deeper shadow for better separation from background */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Deep shadow for better separation from background */
   width: 400px; /* Slightly wider to enhance user interaction */
-  transition: transform 0.3s ease; /* Smooth transition for hover effects */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
 }
 
 /* Hover effect for the container, giving it a dynamic feel */
 .container:hover {
-  transform: translateY(-10px); /* Slight lift on hover */
+  transform: translateY(-15px) scale(1.02); /* Slight lift and scale on hover */
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
 }
 
-/* ========== General Form Styles ========== */
-/* Form styling with padding, rounded corners, and a light shadow */
-form {
-  background-color: #ffffff; /* Consistent white background */
-  padding: 30px; /* Comfortable padding for users */
-  border-radius: 15px; /* Rounded corners matching the container */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for slight separation from background */
-  max-width: 500px; /* Maximum width to keep form elements manageable */
-  margin: 30px; /* Center the form horizontally */
-}
-
-/* ========== Label Styles ========== */
-/* Clear and well-spaced labels for form inputs */
-label {
-  font-size: 16px; /* Standard font size for readability */
-  color: #333; /* Dark gray color for strong contrast against the background */
-  margin-bottom: 10px; /* Space below labels for better separation from inputs */
-  display: block; /* Block display to ensure proper spacing */
+/* ========== Calculator Styles ========== */
+.calculator {
+  display: flex;
+  flex-direction: column;
 }
 
 /* ========== Input Styles ========== */
-/* Uniform styling for all input types, textareas, and select elements */
-input[type=text], input[type=email], input[type=password], textarea, select {
+input[type=text] {
   width: 100%; /* Full width to align with the container */
   padding: 15px; /* Comfortable padding for users */
   margin-bottom: 20px; /* Space below inputs for clarity */
   border: 1px solid #ced4da; /* Light gray border for a subtle frame */
   border-radius: 10px; /* Rounded corners to match form styling */
   background-color: #f8f9fa; /* Light background for a clean appearance */
-  font-size: 16px; /* Readable font size */
+  font-size: 24px; /* Readable font size */
   box-sizing: border-box; /* Ensure padding is included in the total width */
   transition: border-color 0.3s ease; /* Smooth transition for focus state */
 }
 
-/* Focus state for inputs to enhance the user experience */
-input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, textarea:focus, select:focus {
-  border-color: #007bff; /* Highlight border on focus for better visibility */
-  outline: none; /* Remove default browser outline */
-}
-
 /* ========== Button Styles ========== */
-/* Buttons with smooth transitions, clear states, and a modern look */
-button {
-  width: 100%; /* Full width for buttons to align with input fields */
-  padding: 15px; /* Comfortable padding for easy clicking */
-  background-color: #007bff; /* Primary blue for buttons */
-  color: #ffffff; /* White text for strong contrast */
-  font-size: 18px; /* Slightly larger font size for buttons */
-  border: none; /* No border for a clean, modern look */
-  border-radius: 10px; /* Rounded corners to match input fields */
-  cursor: pointer; /* Pointer cursor to indicate interactivity */
-  transition: background-color 0.3s, transform 0.1s; /* Smooth transitions for hover and active states */
-}
-
-/* Hover state for buttons to provide feedback */
-button:hover {
-  background-color: #0056b3; /* Darker blue on hover for a clear visual cue */
-}
-
-/* Active state for buttons with a slight shrink effect for a tactile feel */
-button:active {
-  background-color: #004494; /* Darkest blue for the active state */
-  transform: scale(0.98); /* Slightly shrink button on press */
-}
-
-/* ========== Checkbox and Radio Styles ========== */
-/* Inline display of checkboxes/radios with labels for better layout */
-input[type=checkbox], input[type=radio] {
-  margin-right: 10px; /* Space between checkbox/radio and its label */
-}
-
-input[type=checkbox] + label, input[type=radio] + label {
-  display: inline-block; /* Keep label on the same line as the input */
-  margin-bottom: 20px; /* Space below for consistency with other elements */
-  font-size: 16px; /* Standard font size for labels */
-  color: #333; /* Consistent dark gray color for text */
-}
-
-/* ========== Textarea Styles ========== */
-/* Resizable textarea with minimum height for better user experience */
-textarea {
-  min-height: 100px; /* Ensure textarea is large enough for content */
-  resize: vertical; /* Allow vertical resizing for user convenience */
-}
-
-/* ========== Display Input Styles ========== */
-/* Styling for display input field, typically for calculators or other interfaces */
-#display {
-  width: 100%; /* Full width to match other input fields */
-  height: 60px; /* Taller height for a more substantial appearance */
-  font-size: 32px; /* Larger font size for better readability */
-  text-align: right; /* Align text to the right for a clean look */
-  margin-bottom: 20px; /* Space below to separate from other elements */
-  padding: 15px; /* Comfortable padding */
-  border: 1px solid #ced4da; /* Light border for subtle separation */
-  border-radius: 15px; /* Rounded corners to match the container */
-  background-color: #f1f3f5; /* Light background for a crisp, clean look */
-}
-
-/* ========== Button Grid Styles ========== */
-/* Grid layout for buttons with consistent spacing */
-.buttons {
-  display: grid; /* Use grid layout for buttons */
-  grid-template-columns: repeat(4, 1fr); /* Four equal columns for buttons */
-  gap: 15px; /* Increased gap for better separation */
-}
-
-/* ========== Calculator Button Styles ========== */
-/* Individual button styling within the grid */
 input[type=button] {
   padding: 20px; /* Adequate padding for larger buttons */
   font-size: 22px; /* Slightly larger font for easy use */
@@ -143,56 +57,39 @@ input[type=button] {
   background-color: #007bff; /* Primary blue background */
   color: white; /* White text for strong contrast */
   cursor: pointer; /* Pointer cursor for interactivity */
-  transition: background-color 0.3s, transform 0.1s; /* Smooth transitions for state changes */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for added depth */
+  transition: background-color 0.3s, transform 0.1s, box-shadow 0.3s; /* Smooth transitions for state changes */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow for added depth */
 }
 
-.operation .equals {
-  width: 145px;
-}
-
-/* Adjust button size for smaller screens */
-@media (max-width: 768px) {
-  input[type=button] {
-    padding: 15px; /* Smaller padding for smaller buttons */
-    font-size: 18px; /* Slightly smaller font size */
-  }
-}
-/* Adjust button size for very small screens */
-@media (max-width: 480px) {
-  input[type=button] {
-    padding: 10px; /* Even smaller padding for very small buttons */
-    font-size: 16px; /* Smallest font size for very small screens */
-  }
-}
 /* Hover state for calculator buttons */
 input[type=button]:hover {
   background-color: #0069d9; /* Slightly darker blue on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
 }
 
 /* Active state for calculator buttons with a slight shrink effect */
 input[type=button]:active {
   background-color: #0056b3; /* Darker blue for active state */
-  transform: scale(0.96); /* Slightly shrink button for a tactile feel */
+  transform: scale(0.95); /* Slightly shrink button for a tactile feel */
+}
+
+/* ========== Button Grid Styles ========== */
+.buttons {
+  display: grid; /* Use grid layout for buttons */
+  grid-template-columns: repeat(4, 1fr); /* Four equal columns for buttons */
+  gap: 15px; /* Increased gap for better separation */
 }
 
 /* ========== Special Button Styles ========== */
-/* Green background for operation buttons */
 input[type=button]:nth-child(4n) {
   background-color: #28a745; /* Green background for operator buttons */
 }
 
-/* Hover state for operation buttons */
 input[type=button]:nth-child(4n):hover {
   background-color: #218838; /* Darker green on hover */
 }
 
-/* Active state for operation buttons */
-input[type=button]:nth-child(4n):active {
-  background-color: #1e7e34; /* Darkest green for the active state */
-}
-
-/* Red background for 'Clear' button */
 input[type=button]:nth-child(16) {
   background-color: #dc3545; /* Red background for 'Clear' button */
 }
@@ -201,11 +98,6 @@ input[type=button]:nth-child(16):hover {
   background-color: #c82333; /* Darker red on hover */
 }
 
-input[type=button]:nth-child(16):active {
-  background-color: #bd2130; /* Darkest red for the active state */
-}
-
-/* Yellow background for 'Equals' button */
 input[type=button]:nth-child(17) {
   background-color: #ffc107; /* Yellow background for 'Equals' button */
 }
@@ -214,6 +106,16 @@ input[type=button]:nth-child(17):hover {
   background-color: #e0a800; /* Darker yellow on hover */
 }
 
-input[type=button]:nth-child(17):active {
-  background-color: #d39e00; /* Darkest yellow for the active state */
+/* ========== Media Queries ========== */
+@media (max-width: 768px) {
+  input[type=button] {
+    padding: 15px; /* Smaller padding for smaller buttons */
+    font-size: 18px; /* Slightly smaller font size */
+  }
+}
+@media (max-width: 480px) {
+  input[type=button] {
+    padding: 10px; /* Even smaller padding for very small buttons */
+    font-size: 16px; /* Smallest font size for very small screens */
+  }
 }/*# sourceMappingURL=style.css.map */
