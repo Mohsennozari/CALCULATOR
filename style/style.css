@@ -15,17 +15,19 @@ body {
 
 /* ========== Container Styles ========== */
 .container {
-  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  background-color: rgba(0, 255, 179, 0.2); /* Semi-transparent white background */
   padding: 25px; /* Generous padding for better visual comfort */
   border-radius: 20px; /* Rounded corners for a friendlier appearance */
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Deep shadow for better separation from background */
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
   width: 400px; /* Slightly wider to enhance user interaction */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  border: solid 1px rgb(119, 119, 119);
 }
 
 /* Hover effect for the container, giving it a dynamic feel */
 .container:hover {
-  transform: translateY(-15px) scale(1.02); /* Slight lift and scale on hover */
+  background-color: rgba(0, 255, 179, 0.2); /* Semi-transparent white background */
+  transform: translateY(-15px) scale(1.12); /* Slight lift and scale on hover */
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
 }
 
@@ -63,6 +65,7 @@ input[type=button] {
 
 /* Hover state for calculator buttons */
 input[type=button]:hover {
+  border: solid 1px rgb(0, 16, 85); /* No border for a modern look */
   background-color: #0069d9; /* Slightly darker blue on hover */
   transform: translateY(-3px); /* Slight lift on hover */
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
